@@ -23,6 +23,7 @@ $(document).ready(() => {
       ['#', 'Самара']
     ]);
     
+    new RunBacker('.callbackWrapper', '.callbackUp');
   })();
  
   const controller = (() => {
@@ -43,6 +44,7 @@ $(document).ready(() => {
   })();
   
   const plugins = (() => {
+    
     const sliderOwl = (() => {
       const sliderOwlNode = $(".owlSlider");
       sliderOwlNode.owlCarousel({
