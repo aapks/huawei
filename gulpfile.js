@@ -36,12 +36,6 @@ gulp.task('sass', () => {
       .pipe(autoPrefixer())
       .pipe(gulp.dest('dist/css'))
 });
-gulp.task('owlScss', () => {
-  return gulp.src('dist/bower_components/owl.carousel/src/scss/owl.*.scss')
-      .pipe(sass())
-      .pipe(autoPrefixer())
-      .pipe(gulp.dest('dist/bower_components/owl.carousel/src/css'))
-});
 gulp.task('js:es6', () => {
   return gulp.src('app/js/**/*.js')
       .pipe(rename({
@@ -90,12 +84,6 @@ gulp.task('sass:watch', () => {
     done();
   }))
 });
-gulp.task('owlScss:watch', () => {
-  return gulp.watch('dist/bower_components/owl.carousel/src/scss/owl.*.scss', gulp.series('owlScss', (done) => {
-    bs.reload();
-    done();
-  }))
-});
 gulp.task('js:watch', () => {
   return gulp.watch('app/js/**/*.js', gulp.series('js:es6', (done) => {
     bs.reload();
@@ -121,5 +109,5 @@ gulp.task('html:watch', () => {
   }))
 });
 
-gulp.task('default', gulp.series('clear', gulp.parallel('imageMin', 'fonts', 'sass', 'owlScss', 'js:es6', 'pug'),
-    gulp.parallel('pug:watch', 'sass:watch', 'owlScss:watch', 'img:watch', 'fonts:watch', 'js:watch', 'server')));
+gulp.task('default', gulp.series('clear', gulp.parallel('imageMin', 'fonts', 'sass', 'js:es6', 'pug'),
+    gulp.parallel('pug:watch', 'sass:watch', 'img:watch', 'fonts:watch', 'js:watch', 'server')));
