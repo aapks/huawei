@@ -1,0 +1,106 @@
+@import normolize
+@import vars
+@import fontface
+@import header
+@import contacts
+@import slider
+@import services
+@import portfolio
+@import request
+@import advantages
+@import about
+@import feedbacks
+@import employees
+@import stages
+@import contatsBig
+@import bottomNav
+@import footer
+
+html
+  font-family: Roboto, sans-serif
+  font-size: 7px
+  overflow-x: hidden
+
+h2
+  font-size: 3.2vw
+  text-align: center
+  margin-bottom: 3vw
+
+
+.mainWrap
+  min-height: calc(100vh - 511px)
+
+.content
+  max-width: $site-width
+  margin: 0 auto
+  &__headerStripeTop
+    min-height: 30px
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: center
+  &__contacts
+    display: flex
+    height: 109px
+  &__slider
+    margin-bottom: 3vw
+
+.button
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 2rem
+  font-weight: 700
+  border: 0
+  border-radius: 2px
+  transition: background-color 200ms
+  cursor: pointer
+  text-decoration: none
+  &__headerStripeMiddle
+    width: 170px
+    height: 38px
+    float: right
+    margin-left: 28px
+  &__services
+    text-transform: uppercase
+    width: 31.68%
+    height: 38px
+  &__request
+    border: 0
+    width: 35%
+    height: 38px
+    margin: 1.5vw 0
+    padding: 0 1em
+    box-sizing: content-box
+  &__slider
+    width: 73%
+    padding: 1em 2em
+  &__about
+    padding: 0.7em 3.3em
+  &__feedbacks
+    padding: 0.7em 1.43em
+    margin-right: 10px
+    float: left
+  &__emloyees
+    padding: 0.76em
+    width: 100%
+  &__stages
+    padding: 0.7em 3.3em
+    z-index: 3
+    position: relative
+  &__contactsBig
+    padding: 0.7em 3.3em
+  &__blue
+    background-color: #21BDE4
+    color: #FFFFFF
+    &:hover
+      background-color: #46dbff
+  &__white
+    background-color: #FFFFFF
+    color: #000000
+    &:hover
+      background-color: #e2e2e2
+
+@import mw1200
+@import mw820
+@import keyframes

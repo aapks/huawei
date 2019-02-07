@@ -1,0 +1,57 @@
+.stagesWrapp
+  padding: 0 6.29vw
+  .stagesTop
+    display: flex
+    justify-content: space-between
+  .stagesBottom
+    display: flex
+    justify-content: space-between
+    flex-direction: row-reverse
+
+  .stage
+    min-height: 290px
+    width: 48.45%
+    margin: 1.4% 0
+    padding: 3.59% 3.59%
+    position: relative
+    &__blue
+      background-color: $mainColor
+      color: #FFFFFF
+    &__grey
+      background-color: #F4F4F4
+    h3
+      font-size: 6.5rem
+      margin-bottom: 2.5rem
+      font-weight: bold
+    h4
+      font-size: 2.2rem
+      margin-bottom: 2rem
+      font-weight: bold
+      text-transform: uppercase
+    p
+      font-size: 2.2rem
+      font-weight: 300
+      margin-bottom: 5rem
+    .arrow
+      width: 14.68%
+      height: 23.79%
+      position: absolute
+      background-color: inherit
+      z-index: 2
+      background-position: center
+      background-repeat: no-repeat
+      &__1
+        right: -10.2%
+        top: 0
+        background-image: url("../img/arrowRight_icon.png")
+      &__2
+        right: -1px
+        bottom: -16.8%
+        background-image: url("../img/arrowDown_icon_black.png")
+      &__3
+        transform: rotate(180deg)
+        top: 0
+        left: -10.2%
+        background-image: url("../img/arrowRight_icon.png")
+
+

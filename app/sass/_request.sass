@@ -1,0 +1,72 @@
+.requestBG
+  &__1
+    padding: 10% 0
+    background: url("../img/request1BG.png") top left no-repeat
+    background-size: contain
+  &__2
+    padding: 7% 0 4% 0
+    background: url("../img/request2BG.png") top right no-repeat
+    background-size: contain
+  &__3
+    padding: 7% 0 4% 0
+    background: url("../img/dotsBGcroped.png") bottom center no-repeat
+
+.request
+  display: flex
+  max-height: 530px
+  height: 45.37vw
+  border: 0
+  border-radius: 10px
+  position: relative
+  &__1
+    background: url("../img/request1innerBG.png") center no-repeat
+  &__2
+    background: url("../img/request2innerBG.jpg") center no-repeat
+
+  .requestTextInner
+    width: 50%
+    color: #FFFFFF
+    padding: 6.6% 0 2% 8.31%
+    form
+      display: flex
+      flex-direction: column
+    h2
+      font-size: 3.3vw
+      margin-bottom: 0.3vw
+      text-align: left
+    h3
+      font-size: 1.55vw
+      margin-bottom: 2.5vw
+    input:not(.requestSubmit)
+      width: 70.85%
+      height: 4.71vw
+      max-height: 55px
+      border: 1px solid #E2E2E2
+      border-radius: 2px
+      margin-bottom: 0.7vw
+      padding: 0 5%
+    input.invalid
+      box-shadow: 0px 0px 31px 6px rgba(255,0,0,0.9)
+    p
+      font-size: 0.9vw
+      color: rgba(255, 255, 255, 0.5)
+  .requestImgInner
+    width: 50%
+    position: relative
+    &__1
+      img
+        height: 125.85%
+        position: absolute
+        bottom: -13%
+    &__2
+      img
+        height: 117.85%
+        position: absolute
+        bottom: -6%
+        right: -5%
+    &__3
+      img
+        height: 107.85%
+        position: absolute
+        bottom: 2%
+        right: -8%

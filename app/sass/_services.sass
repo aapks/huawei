@@ -1,0 +1,93 @@
+@import vars
+
+.services
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-bottom: 5vw
+  .servicesWrapp.lastServicesWrapp
+    margin-bottom: 3vw
+  .servicesWrapp
+    width: 100%
+    display: flex
+    justify-content: space-between
+    margin-bottom: 3.92vw
+    .servicesTopInner
+      width: 48.8%
+      text-decoration: none
+      max-height: 355px
+      height: 23.5vw
+      background-color: #212121
+      display: flex
+      padding: 3.7%
+      .servicesTopInnerRight
+        width: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        align-content: center
+      .servicesTopInnerRight.huawei
+        background: url("../img/servicesHuawei.png") center no-repeat
+        background-size: contain
+      .servicesTopInnerRight.honor
+        background: url("../img/servicesHonor.png") center no-repeat
+        background-size: contain
+      .servicesTopInnerLeft
+        width: 50%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        h3
+          color: #FFFFFF
+          font-size: 3.1rem
+        h4
+          color: $mainColor
+          font-size: 3.1rem
+
+    .servicesBottomInner
+      max-height: 355px
+      height: 23.5vw
+      width: 31.67%
+      border: 7px solid #f5f5f5
+      background-color: #f5f5f5
+      padding: 2.5%
+      display: flex
+      flex-direction: column
+      align-items: center
+      transition: border-color 200ms
+      text-decoration: none
+      color: #000000
+      &:hover
+        border-color: $mainColor
+        .viewButton
+          opacity: 1
+      .imgInner
+        height: 60%
+        width: 85.5%
+      .imgInner.tabletServices
+        background: url("../img/servicesTablet.png") center no-repeat
+        background-size: contain
+      .imgInner.laptopServices
+        background: url("../img/servicesLaptop.png") center no-repeat
+        background-size: contain
+      .imgInner.watchServices
+        background: url("../img/servicesWatch.png") center no-repeat
+        background-size: contain
+      .shadowInner
+        height: 20%
+        width: 44.1%
+        background: url("../img/servicesShadowSmall.png") center no-repeat
+        background-size: contain
+      h3
+        font-size: 3rem
+        margin-bottom: 0.2rem
+      .viewButton
+        font-size: 2rem
+        opacity: 0
+        transition: opacity 200ms
+        i
+          color: $mainColor
+          margin-left: 1rem
+          font-size: 1.5rem
+
+

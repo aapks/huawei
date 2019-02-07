@@ -1,0 +1,47 @@
+header.header
+  .headerStripeTop
+    div(class='content content__headerStripeTop' id='regionMenuContainer')
+      .region
+        img(src='img/global_icon.png' alt='global')
+        p Ваш город:&nbsp;
+          span Нижний Новгород
+          i.fas.fa-caret-down
+        .regionDropdown
+          ul
+            each val in ['Санкт-Петербург', 'Москва', 'Самара']
+              li
+                a(href='#')= val
+  include _contacts1
+  nav.menu
+    div.content.content__menu#mobileMenuContainer
+      ul.mobileMenu
+        li
+          a(href='tel:+78314206570')
+            i.fas.fa-phone
+        li
+          i.fas.fa-search
+        li#mobileMenu
+          i.fas.fa-bars
+      ul.mainMenu
+        li.active
+          a(href='#') главная
+        li.sub
+          a(href='#') ремонтируем&nbsp;
+            i.fas.fa-caret-down
+          .mainMenuDropdown
+            ul
+              each val in ['Huawei', 'Honor', 'Meizu', 'Xiaomi']
+                li
+                  a(href='#')= val
+        li
+          a(href='#') о&nbsp;компании
+        li
+          a(href='#') сотрудничество
+        li
+          a(href='#') гарантии
+        li
+          a(href='#') новости
+        li
+          a(href='#') контакты
+        li.search
+          img(src='img/search_icon_big.png' alt='search')
