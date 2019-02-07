@@ -42,11 +42,34 @@
       font-size: 1rem
     &__services
       width: 90vw
-
     &__feedbacks
       width: 100%
       margin-bottom: 1.5vw
+    &__blue:hover
+      background-color: $mainColor
+    &__white:hover
+      background-color: #FFFFFF
 
+  .owl-altNav-prev, .owl-altNav-next
+    position: absolute
+    top: 40%
+    width: 6.92%
+    height: 15.93%
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: rgba(255, 255, 255, 0.4)
+    z-index: 2
+    color: white
+    font-size: 3vw
+    &__feedbacks
+      height: 7%
+    &__employees
+      background-color: rgba(0, 0, 0, 0.4)
+  .owl-altNav-prev
+    left: 0
+  .owl-altNav-next
+    right: 0
 
   .owlSlider
     .slide
@@ -98,12 +121,14 @@
         li.active:hover
           border-bottom: 0.2vw #000000 solid
     .portfolioOwl
-      .owl-nav
-        display: none
       .portfolioSlide:hover
         transform: none
         .portfolioSlideMask
           display: none
+      .owl-nav
+        display: none
+      .owl-dots
+        display: none
 
   .request
     border-radius: 0

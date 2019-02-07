@@ -43,62 +43,99 @@ $(document).ready(() => {
   })();
   
   const plugins = (() => {
-    $(".owlSlider").owlCarousel({
-      items: 1,
-      loop: true,
-      nav: true,
-      navText: ['<img src="../img/arrowLeft_icon.png"/>', '<img src="../img/arrowRight_icon.png"/>'],
-      navElement: 'div',
-      responsive: {
-        820: {
-          items: 2
+    const sliderOwl = (() => {
+      const sliderOwlNode = $(".owlSlider");
+      sliderOwlNode.owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        navText: ['<img src="../img/arrowLeft_icon.png"/>', '<img src="../img/arrowRight_icon.png"/>'],
+        navElement: 'div',
+        responsive: {
+          820: {
+            items: 2
+          }
         }
-      }
-    });
+      });
+      $('.owl-altNav-prev__slider').click(() => {
+        sliderOwlNode.trigger('prev.owl.carousel');
+      });
+      $('.owl-altNav-next__slider').click(() => {
+        sliderOwlNode.trigger('next.owl.carousel');
+      });
+    })();
     
-    $(".portfolioOwl").owlCarousel({
-      items: 2,
-      loop: true,
-      nav: true,
-      dots: false,
-      margin: 1,
-      navText: ['<img src="../img/arrowLeft_icon.png"/>', '<img src="../img/arrowRight_icon.png"/>'],
-      navElement: 'div'
-    });
+    const portfolioOwl = (() => {
+      const portfolioOwlNode = $(".portfolioOwl");
+      portfolioOwlNode.owlCarousel({
+        items: 2,
+        loop: true,
+        nav: true,
+        dots: false,
+        margin: 1,
+        navText: ['<img src="../img/arrowLeft_icon.png"/>', '<img src="../img/arrowRight_icon.png"/>'],
+        navElement: 'div'
+      });
+      $('.owl-altNav-prev__portfolio').click(() => {
+        portfolioOwlNode.trigger('prev.owl.carousel');
+      });
+      $('.owl-altNav-next__portfolio').click(() => {
+        portfolioOwlNode.trigger('next.owl.carousel');
+      });
+    })();
     
-    $(".feedbacksOwl").owlCarousel({
-      nav: true,
-      items: 1,
-      loop: true,
-      dots: true,
-      navText: ['<img src="../img/arrowLeft_icon.png"/>', '<img src="../img/arrowRight_icon.png"/>'],
-      navElement: 'div',
-      responsive: {
-        600: {
-          items: 2,
-          margin: 2
-        },
-        820: {
-          items: 1
+    const feedbacksOwl = (() => {
+      const feedbacksOwlNode = $(".feedbacksOwl");
+      feedbacksOwlNode.owlCarousel({
+        nav: true,
+        items: 1,
+        loop: true,
+        dots: true,
+        navText: ['<img src="../img/arrowLeft_icon.png"/>', '<img src="../img/arrowRight_icon.png"/>'],
+        navElement: 'div',
+        responsive: {
+          600: {
+            items: 2,
+            margin: 2
+          },
+          820: {
+            items: 1
+          }
         }
-      }
-    });
-  
-    $(".employeesOwl").owlCarousel({
-      nav: true,
-      items: 2,
-      loop: true,
-      dots: true,
-      margin: 10,
-      navText: ['<img src="../img/arrowLeft_icon.png"/>', '<img src="../img/arrowRight_icon.png"/>'],
-      navElement: 'div',
-      responsive: {
-        730: {
-          items: 3,
-          margin: 91
+      });
+      $('.owl-altNav-prev__feedbacks').click(() => {
+        feedbacksOwlNode.trigger('prev.owl.carousel');
+      });
+      $('.owl-altNav-next__feedbacks').click(() => {
+        feedbacksOwlNode.trigger('next.owl.carousel');
+      });
+    })();
+    
+    const employeesOwl = (() => {
+      const employeesOwlNode = $(".employeesOwl");
+        employeesOwlNode.owlCarousel({
+        nav: true,
+        items: 2,
+        loop: true,
+        dots: true,
+        margin: 10,
+        navText: ['<img src="../img/arrowLeft_icon.png"/>', '<img src="../img/arrowRight_icon.png"/>'],
+        navElement: 'div',
+        responsive: {
+          730: {
+            items: 3,
+            margin: 91
+          }
         }
-      }
-    });
+      });
+      $('.owl-altNav-prev__employees').click(() => {
+        employeesOwlNode.trigger('prev.owl.carousel');
+      });
+      $('.owl-altNav-next__employees').click(() => {
+        employeesOwlNode.trigger('next.owl.carousel');
+      });
+    })();
+    
     
     new Tabs('.tabsNav', '.portfolioInner');
   
