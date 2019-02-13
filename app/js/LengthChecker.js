@@ -5,7 +5,7 @@ class LengthChecker {
   }
 
   _init() {
-    const phoneInput = $(this.formClass).find('input[type="phone"]');
+    const phoneInput = $(this.formClass).find('input[type="tel"]');
     $(this.formClass).submit(() => {
       if (!this._firstCheck(phoneInput)) {
         event.preventDefault()
